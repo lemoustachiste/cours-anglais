@@ -5,7 +5,6 @@
   --line: #d8e1e5;
   --paper: #fbfaf6;
   --panel: #ffffff;
-  --blue: #194f6b;
   --blue-deep: #11394e;
   --green: #527861;
   --gold: #c9913a;
@@ -401,4 +400,224 @@ a {
   .hero-actions .button {
     width: 100%;
   }
+}
+
+/* ==========================
+   NEW BRAND IDENTITY
+========================== */
+
+:root{
+  --blue:#17345D;
+  --blue-deep:#052555;
+  --red:#C62828;
+  --paper:#F8F5F0;
+  --ink:#2E2E2E;
+  --line:rgba(23,52,93,.08);
+}
+
+/* TYPO */
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter',sans-serif;
+}
+
+h1,h2,h3{
+  color:var(--blue-deep);
+  font-family:'Montserrat',sans-serif;
+}
+
+.hero h1{
+  font-weight:800;
+}
+
+.section-label{
+  color:var(--red);
+}
+
+.eyebrow {
+  color:#fff;
+}
+
+/* LOGO */
+
+.site-logo{
+  height:72px;
+  width:auto;
+  display:block;
+}
+
+.brand-mark{
+  display:none;
+}
+
+/* HEADER */
+
+.site-header{
+  background:rgba(248,245,240,.95);
+}
+
+.nav a:hover{
+  color:var(--red);
+  background:transparent;
+}
+
+/* HERO */
+
+.hero{
+  min-height:auto;
+  padding:80px 0;
+}
+
+.hero-shade{
+  background:
+  linear-gradient(
+    90deg,
+    rgba(23,52,93,.82),
+    rgba(23,52,93,.45)
+  );
+}
+
+.hero-content{
+  max-width:760px;
+}
+
+.hero-text{
+  font-size:1.3rem;
+}
+
+.hero-subtext{
+  opacity:.9;
+}
+
+/* BUTTONS */
+
+.button{
+  border-radius:999px;
+}
+
+.button.primary{
+  background:var(--red);
+  color:white;
+}
+
+.button.primary:hover{
+  background:#b32121;
+}
+
+.button.secondary{
+  border:2px solid white;
+  color:white;
+}
+
+
+.button.secondary--dark{
+  border:2px solid var(--blue);
+  color:var(--blue);
+}
+
+/* INTRO */
+
+.intro,
+.section{
+  padding-top:110px;
+  padding-bottom:110px;
+}
+
+/* BENEFITS */
+
+.benefits{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.benefits div{
+  background:white;
+  border-radius:16px;
+  padding:24px;
+  border:1px solid var(--line);
+}
+
+/* COURSE CARDS */
+
+.course-card{
+  border-radius:18px;
+  border:1px solid var(--line);
+
+  box-shadow:
+  0 10px 30px rgba(23,52,93,.06);
+
+  transition:.25s;
+}
+
+.course-card:hover{
+  transform:translateY(-6px);
+}
+
+.course-card h3{
+  color:var(--blue);
+}
+
+/* HIGHLIGHT */
+
+.highlight{
+  background:
+  rgba(198,40,40,.08);
+
+  border-left:
+  4px solid var(--red);
+
+  padding:24px;
+
+  border-radius:12px;
+}
+
+/* TYPEFORM SECTION */
+
+#trouver-mon-groupe{
+  background:white;
+
+  border-radius:24px;
+
+  padding:60px;
+
+  box-shadow:
+  0 12px 40px rgba(23,52,93,.08);
+}
+
+/* CONTACT BUTTONS */
+
+.contact-actions{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+/* FOOTER */
+
+.site-footer{
+  background:transparent;
+  color:var(--blue);
+  border-top:1px solid var(--line);
+}
+
+.site-footer a{
+  color:var(--blue);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .site-logo{
+    height:56px;
+  }
+
+  #trouver-mon-groupe{
+    padding:24px;
+  }
+
 }
