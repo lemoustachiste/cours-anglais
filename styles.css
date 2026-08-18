@@ -652,3 +652,79 @@ h1,h2,h3{
 .course-card .button {
   margin-top: auto;
 }
+/* ==========================
+   COMMENT ÇA FONCTIONNE
+========================== */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.steps > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 190px;
+  padding: 26px 28px;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px rgba(23, 52, 93, 0.10);
+}
+
+.steps .step-number {
+  display: block;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.steps h3 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.steps p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.section-info {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 24px;
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: rgba(198, 40, 40, 0.06);
+  border-left: 4px solid var(--red);
+  border-radius: 12px;
+}
+
+.section-info p {
+  margin: 0;
+  color: var(--ink);
+}
+
+@media (max-width: 768px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  .steps > div {
+    min-height: auto;
+  }
+
+  .section-info {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
