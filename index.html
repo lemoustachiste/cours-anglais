@@ -518,24 +518,7 @@
 
   </div>
 </section>
-<!-- EMAIL PROTECTION SCRIPT -->
-<script>
-(function () {
-  const user = "contact";
-  const domain = "cours-anglais-morteau.fr";
-  const email = user + "@" + domain;
 
-  const contactEmail = document.getElementById("contact-email");
-  const footerContact = document.getElementById("footer-contact");
-
-  if (contactEmail) {
-    contactEmail.href = "mailto:" + email;
-  }
-
-  if (footerContact) {
-    footerContact.href = "mailto:" + email;
-  }
-})();
 </script>
 <!-- CONTACT -->
 <section id="contact" class="contact section">
@@ -569,5 +552,25 @@
      rel="noopener">
      Facebook
   </a>
-</footer>  </body>
+</footer>  
+<!-- EMAIL PROTECTION SCRIPT -->
+<script>
+(function () {
+  const user = "contact";
+  const domain = "cours-anglais-morteau.fr";
+  const email = user + "@" + domain;
+
+  const contactEmail = document.getElementById("contact-email");
+  const footerContact = document.getElementById("footer-contact");
+
+  if (contactEmail) {
+    contactEmail.href = "mailto:" + email;
+  }
+
+  if (footerContact) {
+    footerContact.href = "mailto:" + email;
+  }
+})();
+</script>
+</body>
 </html>
