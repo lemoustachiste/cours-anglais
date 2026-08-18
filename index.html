@@ -254,53 +254,7 @@
   </div>
 </section>
 
-<!-- ENTREPRISES -->
-<section id="entreprises" class="section">
-  <div class="section-heading">
-    <p class="section-label">Entreprises</p>
 
-    <h2>Vos collaborateurs échangent avec des clients, fournisseurs ou partenaires à l’étranger ?</h2>
-  </div>
-
-  <p class="section-text">
-    Ils doivent participer à des réunions en anglais, prendre la parole ou simplement être plus à l’aise dans leurs échanges professionnels ?
-  </p>
-
-  <p class="section-text">
-    Je propose des cours d’anglais en entreprise, construits autour des situations et des besoins réels de vos équipes. L’objectif est de leur permettre de pratiquer l’anglais dans un cadre professionnel et de gagner progressivement en aisance.
-  </p>
-
-  <ul class="list">
-    <li>Les échanges professionnels du quotidien</li>
-    <li>Les réunions et les prises de parole en anglais</li>
-    <li>Les échanges avec des clients, fournisseurs ou partenaires internationaux</li>
-    <li>Le vocabulaire et les situations propres à votre activité</li>
-  </ul>
-
-  <a class="button secondary--dark" id="entreprises-contact">
-    Parler de votre projet
-  </a>
-
-  <noscript>
-    <p>
-      Contact : contact [at] cours-anglais-morteau.fr
-    </p>
-  </noscript>
-
-  <script>
-    (function () {
-      const user = "contact";
-      const domain = "cours-anglais-morteau.fr";
-      const email = user + "@" + domain;
-
-      const link = document.getElementById("entreprises-contact");
-      link.href =
-        "mailto:" +
-        email +
-        "?subject=Demande%20d'information%20-%20cours%20en%20entreprise";
-    })();
-  </script>
-</section>
 
 <!-- COMMENT ÇA FONCTIONNE -->
 <section class="section">
@@ -445,7 +399,53 @@
   </p>
 
 </section>
+<!-- ENTREPRISES -->
+<section id="entreprises" class="section">
+  <div class="section-heading">
+    <p class="section-label">Entreprises</p>
 
+    <h2>Vos collaborateurs échangent avec des clients, fournisseurs ou partenaires à l’étranger ?</h2>
+  </div>
+
+  <p class="section-text">
+    Ils doivent participer à des réunions en anglais, prendre la parole ou simplement être plus à l’aise dans leurs échanges professionnels ?
+  </p>
+
+  <p class="section-text">
+    Je propose des cours d’anglais en entreprise, construits autour des situations et des besoins réels de vos équipes. L’objectif est de leur permettre de pratiquer l’anglais dans un cadre professionnel et de gagner progressivement en aisance.
+  </p>
+
+  <ul class="list">
+    <li>Les échanges professionnels du quotidien</li>
+    <li>Les réunions et les prises de parole en anglais</li>
+    <li>Les échanges avec des clients, fournisseurs ou partenaires internationaux</li>
+    <li>Le vocabulaire et les situations propres à votre activité</li>
+  </ul>
+
+  <a class="button secondary--dark" id="entreprises-contact">
+    Parler de votre projet
+  </a>
+
+  <noscript>
+    <p>
+      Contact : contact [at] cours-anglais-morteau.fr
+    </p>
+  </noscript>
+
+  <script>
+    (function () {
+      const user = "contact";
+      const domain = "cours-anglais-morteau.fr";
+      const email = user + "@" + domain;
+
+      const link = document.getElementById("entreprises-contact");
+      link.href =
+        "mailto:" +
+        email +
+        "?subject=Demande%20d'information%20-%20cours%20en%20entreprise";
+    })();
+  </script>
+</section>
 <!-- FAQ -->
 <section id="faq" class="section">
   <div class="section-heading">
@@ -518,23 +518,46 @@
 
   </div>
 </section>
-<!-- EMAIL PROTECTION SCRIPT (ONCE ONLY) -->
+<!-- EMAIL PROTECTION SCRIPT -->
 <script>
 (function () {
   const user = "contact";
   const domain = "cours-anglais-morteau.fr";
   const email = user + "@" + domain;
 
-  document.getElementById("contact-email").href =
-    "mailto:" + email;
+  const contactEmail = document.getElementById("contact-email");
+  const footerContact = document.getElementById("footer-contact");
 
-  document.getElementById("email-link").href =
-    "mailto:" + email;
+  if (contactEmail) {
+    contactEmail.href = "mailto:" + email;
+  }
 
-  document.getElementById("footer-contact").href =
-    "mailto:" + email;
+  if (footerContact) {
+    footerContact.href = "mailto:" + email;
+  }
 })();
 </script>
+<!-- CONTACT -->
+<section id="contact" class="contact section">
+  <div>
+    <p class="section-label">Contact</p>
+
+    <h2>Une question ? Parlons-en.</h2>
+
+    <p>
+      Vous souhaitez en savoir plus sur les cours, les groupes ou les
+      possibilités pour votre entreprise ? N’hésitez pas à me contacter.
+    </p>
+  </div>
+
+  <a
+    class="button primary"
+    id="contact-email"
+    href="#"
+  >
+    Me contacter par email
+  </a>
+</section>
     </main>
 
     <footer class="site-footer">
