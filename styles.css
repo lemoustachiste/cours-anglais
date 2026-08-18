@@ -621,3 +621,34 @@ h1,h2,h3{
   }
 
 }
+/* Espacement et hiérarchie des cartes de cours */
+
+.course-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.course-card .course-info {
+  margin-bottom: 1.5rem;
+}
+
+.course-card .course-description {
+  margin-bottom: 1.5rem;
+}
+
+.course-card .course-price {
+  margin-bottom: 1.5rem;
+}
+
+.course-card .course-test {
+  margin-bottom: 1.5rem;
+}
+
+.course-card .button {
+  margin-top: auto;
+}
