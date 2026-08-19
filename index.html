@@ -526,7 +526,6 @@
   </div>
 </section>
 
-</script>
 <!-- CONTACT -->
 <section id="contact" class="contact section">
   <div>
@@ -578,6 +577,30 @@
     footerContact.href = "mailto:" + email;
   }
 })();
+</script>
+<script>
+window.addEventListener("load", function () {
+  if (window.location.hash !== "#cours") return;
+
+  const target = document.getElementById("cours");
+  if (!target) return;
+
+  setTimeout(function () {
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.offsetHeight : 0;
+
+    const targetPosition =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      headerHeight -
+      12;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "auto"
+    });
+  }, 150);
+});
 </script>
 </body>
 </html>
